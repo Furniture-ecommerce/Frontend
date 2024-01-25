@@ -1,6 +1,7 @@
 import "@styles/globals.css";
 
 import Header from "@components/Header";
+import { Carousel } from "@components/Carousel";
 // import Provider from "@components/Provider";
 
 export const metadata = {
@@ -11,14 +12,9 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang="en">
     <body>
-        <div className="main">
-          <div className="gradient" />
-        </div>
-
-        <main className="app">
-          <Header />
-          {children}
-        </main>
+      <Header />
+      
+      {children}
     </body>
   </html>
 );
