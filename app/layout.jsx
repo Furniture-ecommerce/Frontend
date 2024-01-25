@@ -1,7 +1,7 @@
 import "@styles/globals.css";
 
 import Header from "@components/Header";
-import { Carousel } from "@components/Carousel";
+import { Carousel } from "@components/BannerCarousel";
 // import Provider from "@components/Provider";
 
 export const metadata = {
@@ -11,9 +11,8 @@ export const metadata = {
 
 const RootLayout = ({ children }) => (
   <html lang="en">
-    <body>
+    <body className="bg-white">
       <Header />
-      
       {children}
     </body>
   </html>
