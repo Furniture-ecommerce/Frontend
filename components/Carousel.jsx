@@ -1,5 +1,5 @@
-import Image from "next/image";
-
+import React from "react";
+// import slide1 from "./images/slide1.png";
 export const Carousel = () => {
   return (
     <div className="carousel w-full h-[536px]">
