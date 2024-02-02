@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ContactUs = () => {
-  return (
-    <div>ContactUs</div>
-  )
-}
+  return <div className="mx-auto max-w-screen-xl"></div>;
+};
 
-export default ContactUs
+export default ContactUs;
