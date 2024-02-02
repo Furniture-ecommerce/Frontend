@@ -1,6 +1,6 @@
 import React from "react";
 // import slide1 from "./images/slide1.png";
-export const BannerCarousel = () => {
+export const Carousel = () => {
   return (
       <div className="carousel h-[536px]">
         <div id="slide1" className="carousel-item relative w-full">
