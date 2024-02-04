@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Banner = () => {
+export const Banner = ({ title, desc, sale }) => {
   return (
     <div className="bg-neutral-200 mb-10">
       <div className=" flex items-center">
@@ -8,15 +8,12 @@ export const Banner = () => {
           <img className="" src="/assets/images/sofa-bohemian.png" alt="" />
         </div>
         <div className="">
-          <div className="mx-10 w-1/2">
+          <div className="mx-10 w-[52%]">
             <h3 className="text-blue-600 mb-4">
-              <b>SALE UP TO 35% OFF</b>
+              <b>{sale}</b>
             </h3>
-            <h1 className="text-5xl mb-4">HUNDREDS of New lower prices!</h1>
-            <p className="mb-6">
-              It’s more affordable than ever to give every room in your home a
-              stylish makeover
-            </p>
+            <h1 className="text-5xl mb-4">{title}</h1>
+            <p className="mb-6">{desc}</p>
             <h3 className="">Shop Now</h3>
           </div>
         </div>
