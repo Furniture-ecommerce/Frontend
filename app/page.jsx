@@ -5,6 +5,7 @@ import { Card } from "@components/Card";
 import { Banner } from "@components/Banner";
 import { Blog } from "@components/Blog";
 import { NewsLetter } from "@components/NewsLetter";
+import Footer from "@components/Footer";
 
 const icons = [
   {
@@ -56,6 +57,7 @@ const Home = () => {
         <Blog />
       </div>
       <NewsLetter />
+      <Footer />
     </>
   );
 };
