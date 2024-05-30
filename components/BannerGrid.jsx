@@ -4,12 +4,17 @@ export const BannerGrid = () => {
   return (
     <div>
       <div className="py-10 place-content-center flex items-center justify-center">
-        <div clasName="flex-initial w-full">
-          <div className="text-7xl">
-            <b className="">
-              Simply Unique<span className="text-gray-600">/</span> <br />
-              Simply Better<span className="text-gray-600">.</span>
-            </b>
+        <div className="flex-initial w-full md:w-auto">
+          <div className="text-center md:text-right">
+            <div className="text-4xl md:text-7xl">
+              <b className="leading-tight">
+                Simply Unique
+                <span className="text-gray-600">/</span>
+                <br />
+                Simply Better
+                <span className="text-gray-600">.</span>
+              </b>
+            </div>
           </div>
         </div>
         <div>
