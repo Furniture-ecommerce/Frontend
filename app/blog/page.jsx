@@ -2,6 +2,7 @@ import { Headimg } from "@components/Headimg";
 import { NewsLetter } from "@components/NewsLetter";
 import { Flexblog } from "@components/Flexblog";
 import React from "react";
+import Footer from "@components/Footer";
 
 const blogs = [
   {
@@ -63,7 +64,7 @@ const blogs = [
 const Blog = () => {
   return (
     <>
-      <div className="mx-auto max-w-screen-xl">
+      <div className="mx-auto max-w-screen-xl px-4">
         <Headimg
           title="Our Blog"
           desc="Home Ideas And Design Inspiration"
@@ -72,7 +73,7 @@ const Blog = () => {
         <div className="flex justify-end mb-4">
           <div className="relative">
             <select
-              className=" px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              className="px-4 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               // value={sortBy}
               // onChange={(e) => handleSortBy(e.target.value)}
             >
@@ -82,7 +83,7 @@ const Blog = () => {
             </select>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {blogs.map((blog) => (
             <Flexblog key={blog.id} blog={blog} />
           ))}
@@ -94,6 +95,7 @@ const Blog = () => {
         </div>
       </div>
       <NewsLetter />
+      <Footer />
     </>
   );
 };

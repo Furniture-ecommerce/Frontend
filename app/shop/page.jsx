@@ -5,6 +5,7 @@ import { Headimg } from "@components/Headimg";
 import { Dropdown } from "@components/Dropdown";
 import { CardProducts } from "@components/CardProducts";
 import { NewsLetter } from "@components/NewsLetter";
+import Footer from "@components/Footer";
 
 const productData = [
   {
@@ -161,15 +162,15 @@ const Shop = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-screen-xl">
+      <div className="mx-auto max-w-screen-xl p-4">
         <Headimg
           title="Shop Page"
           desc="Let’s design the place you always imagined."
           img="/assets/images/shop-header.png"
         />
 
-        <div className="flex justify-between items-end">
-          <div className="flex space-x-4">
+        <div className="flex flex-wrap justify-between items-end mb-4">
+          <div className="flex flex-wrap space-x-4 mb-4 sm:mb-0">
             {/* Dropdown 1 */}
             <div className="relative inline-block text-left">
               <Dropdown
@@ -185,10 +186,10 @@ const Shop = () => {
             </div>
           </div>
 
-          {/* Dropdown 3 (on the right, smaller and at the bottom) */}
+          {/* Dropdown 3 */}
           <div className="relative inline-block text-left">
             <details className="dropdown">
-              <summary className="w-[150px] shadow-none border-none bg-white hover:text-white text-black m-1 btn flex items-center">
+              <summary className="w-[150px] shadow-none border-none bg-white hover:bg-gray-100 text-black btn flex items-center">
                 Sort by Date
                 <span className="ml-2" role="img" aria-label="down-arrow">
                   ˅
@@ -205,8 +206,9 @@ const Shop = () => {
             </details>
           </div>
         </div>
+
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {productData.slice(0, visibleProducts).map((product) => (
               <CardProducts
                 key={product.id}
@@ -235,6 +237,7 @@ const Shop = () => {
         </div>
       </div>
       <NewsLetter />
+      <Footer />
     </>
   );
 };
