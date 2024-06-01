@@ -1,5 +1,6 @@
 import { Banner } from "@components/Banner";
 import { Card } from "@components/Card";
+import Footer from "@components/Footer";
 import React from "react";
 
 const iconsC = [
@@ -53,9 +54,9 @@ const icons = [
 const ContactUs = () => {
   return (
     <>
-      <div className="mx-auto max-w-screen-xl">
-        <div className="w-[65%] mb-12">
-          <h1 className="text-6xl mb-5">
+      <div className="mx-auto max-w-screen-xl px-4">
+        <div className="w-full lg:w-2/3 mb-12">
+          <h1 className="text-3xl lg:text-6xl mb-5">
             We believe in sustainable decor. We’re passionate about life at
             home.
           </h1>
@@ -64,37 +65,30 @@ const ContactUs = () => {
             plenty of mirrors and classic design, which can be incorporated into
             any decor project. The pieces enchant for their sobriety, to last
             for generations, faithful to the shapes of each period, with a touch
-            of the present
+            of the present.
           </p>
         </div>
-        <div>
-          <Banner
-            title="About Us"
-            desc={
-              <>
-                3legant is a gift & decorations store based in HCMC, Vietnam.
-                Est since 2019.
-                <br />
-                Our customer service is always prepared to support you 24/7
-              </>
-            }
-            sale=""
-          />
+        <Banner
+          title="About Us"
+          desc={
+            <>
+              3legant is a gift & decorations store based in HCMC, Vietnam. Est
+              since 2019.
+              <br />
+              Our customer service is always prepared to support you 24/7.
+            </>
+          }
+          sale=""
+        />
+        <div className="my-10 text-center text-5xl">
+          <b>Contact Us</b>
         </div>
-        <div>
-          <div className="my-10 flex items-center justify-center">
-            <div className="text-5xl">
-              <b className="text-center">Contact Us</b>
-            </div>
-          </div>
-        </div>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row justify-around">
           {iconsC.map((icon) => (
             <Card key={icon.id} icon={icon} />
           ))}
         </div>
         <div className="mb-16 flex flex-col md:flex-row">
-          {/* left */}
           <div className="md:flex-1 p-4">
             <form className="mb-4">
               <div className="mb-4">
@@ -124,7 +118,7 @@ const ContactUs = () => {
                   id="eaddress"
                   name="eaddress"
                   className="mt-1 p-2 border border-black bg-white rounded-md w-full"
-                  placeholder="Your name"
+                  placeholder="Your email"
                 />
               </div>
               <div className="mb-4">
@@ -139,7 +133,7 @@ const ContactUs = () => {
                   name="message"
                   rows="3"
                   className="mt-1 p-2 border border-black bg-white rounded-md w-full"
-                  placeholder="Your Message"
+                  placeholder="Your message"
                 ></textarea>
               </div>
               <button
@@ -150,29 +144,27 @@ const ContactUs = () => {
               </button>
             </form>
           </div>
-
-          {/* right */}
           <div className="md:flex-1 p-4">
-            {/* Gantilah dengan komponen peta yang sesuai */}
-            <div className="h-[100%] aspect-w-16 aspect-h-9 bg-gray-300 rounded-md">
+            <div className="h-full aspect-w-16 aspect-h-9 bg-gray-300 rounded-md overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63221.773103590764!2d111.03545650523834!3d-7.96161301215064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bd565c2fc52e9%3A0x4027a76e3530010!2sKec.%20Tirtomoyo%2C%20Kabupaten%20Wonogiri%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1707017916588!5m2!1sid!2sid"
                 width="100%"
                 height="100%"
                 style={{ border: "0" }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
         </div>
       </div>
-      <div className="flex px-20 bg-neutral-200">
+      <div className="flex bg-neutral-200">
         {icons.map((icon) => (
           <Card key={icon.id} icon={icon} />
         ))}
       </div>
+      <Footer />
     </>
   );
 };

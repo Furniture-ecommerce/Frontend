@@ -2,21 +2,13 @@ import React from "react";
 
 export const Headimg = ({ img, title, desc }) => {
   return (
-    <div style={{ position: "relative" }}>
-      <img className="w-[100%] pb-10" src={img} alt="" />
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          textAlign: "center",
-        }}
-      >
-        <h1 className="text-6xl mb-6">
-          <b>{title}</b>
+    <div className="relative">
+      <img className="w-full pb-10" src={img} alt="" />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 font-bold">
+          {title}
         </h1>
-        <p>{desc}</p>
+        <p className="text-base sm:text-lg md:text-xl">{desc}</p>
       </div>
     </div>
   );
